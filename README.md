@@ -1,70 +1,254 @@
-# Getting Started with Create React App
+# 🎓 EduNexus – School Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, full-stack **School Management System** built with the **MERN stack (MongoDB, Express.js, React.js, Node.js)** to streamline academic operations, enhance communication, and simplify administration.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Overview
 
-### `npm start`
+EduNexus is designed to digitize and optimize school workflows — from managing students and teachers to tracking attendance, evaluating performance, and enabling seamless communication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔑 Key Features
 
-### `npm test`
+### 👥 Role-Based Access
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Admin** – Full control over system management
+* **Teacher** – Manage classes, attendance, and student performance
+* **Student** – View records, marks, and feedback
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🛠 Admin Dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Add & manage students and teachers
+* Create classes and subjects
+* Manage system-wide settings
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 📊 Attendance Management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Mark students as **Present/Absent**
+* Generate attendance reports
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📈 Performance Tracking
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Assign marks and feedback
+* Monitor student progress over time
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 📉 Data Visualization
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Interactive charts and tables
+* Easy performance insights
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 💬 Communication System
 
-### Analyzing the Bundle Size
+* Messaging between teachers and students
+* Improves collaboration and engagement
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧰 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Layer    | Technology                   |
+| -------- | ---------------------------- |
+| Frontend | React.js, Material UI, Redux |
+| Backend  | Node.js, Express.js          |
+| Database | MongoDB                      |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ⚙️ Installation Guide
 
-### Deployment
+### 1️⃣ Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git clone https://github.com/Yogndrr/MERN-School-Management-System.git
+cd MERN-School-Management-System
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌿 Branches Explained
+
+* **main** → Latest improved architecture (recommended)
+* **legacy-version** → Code from YouTube tutorial
+* **community-version** → Community contributions
+
+Switch branch:
+
+```bash
+git checkout legacy-version
+```
+
+---
+
+## 🔧 Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+
+```
+MONGO_URL=mongodb://127.0.0.1/smsproject
+SECRET_KEY=your_secret_key
+```
+
+Start backend:
+
+```bash
+npm start
+```
+
+---
+
+## 🎨 Frontend Setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create `.env` file:
+
+```
+REACT_APP_BASE_URL=http://localhost:5000
+```
+
+Start frontend:
+
+```bash
+npm start
+```
+
+---
+
+## 🗄 Database Setup
+
+### Option 1: Local MongoDB
+
+* Install MongoDB Community Server
+* Run:
+
+```bash
+mongod
+```
+
+Connection string:
+
+```
+mongodb://127.0.0.1:27017/yourdbname
+```
+
+---
+
+### Option 2: MongoDB Atlas (Recommended for Deployment)
+
+* Create a cluster on MongoDB Atlas
+* Use connection string:
+
+```
+mongodb+srv://<user>:<password>@cluster-url/dbname
+```
+
+---
+
+## 🚀 Deployment
+
+### Backend (Render)
+
+* Create a Web Service
+* Build command:
+
+```
+npm install
+```
+
+* Start command:
+
+```
+npm start
+```
+
+Add environment variables:
+
+* `MONGO_URL`
+* `SECRET_KEY`
+
+---
+
+### Frontend (Netlify / Vercel)
+
+Build command:
+
+```
+npm run build
+```
+
+Publish directory:
+
+```
+build
+```
+
+Environment variable:
+
+```
+REACT_APP_BASE_URL=https://your-backend-url
+```
+
+---
+
+## 🔗 Connecting Frontend & Backend
+
+Update frontend `.env`:
+
+```
+REACT_APP_BASE_URL=https://your-backend.onrender.com
+```
+
+Rebuild after changes.
+
+---
+
+## 📌 Notes
+
+* `legacy-version` → Matches YouTube tutorial
+* `main` → Modern architecture (actively improving)
+* `community-version` → Open for contributions
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork the repo and submit a PR to the **community-version** branch.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🌟 Support
+
+If you found this project helpful:
+
+* ⭐ Star the repository
+* 🍴 Fork it
+* 📢 Share it
+
+---
